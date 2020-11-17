@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pena Atletica de India</title>
+	</head>
+	
+	<body>
+		<header>
+			<center><img src="/images/atletico.svg"/></center>
+			<nav>
+				<center><li><a href="/index.html">Home</a></li>	<! 'a' tag is used for giving links>
+				<li><a href="/meetings.html">Meetings</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/contact.html">Contact</a></li></center>
+			</nav>
+		</header>
+	
+		<section>
+			<h1>
+				<center><strong>Meetings</strong></center>	<! em is used to make things italics and strong is used to make things bold >
+			</h1>
+
+			<form action="/api/login" method="POST"> <! If we write nothing in method it takes 'GET' HTTP request by default, but GET HTTP request exposes the login credentials in URL above thus making hacking a possibility, thats why to hide credentials in URL 'POST' method is used>
+				<center><label>Username: </label><input type="text" name="username"></center>
+				<br/>
+				<center><label>Password: </label><input type="password" name="password"></center>
+				<br/>
+				<center><input type="checkbox" name="rememberme"><label>Remember me</label></center>
+				<br/>	
+				<center><input type="submit" name="loginbutton"> <input type="reset" name="cancelbutton"></center>
+				<br/>
+			</form>
+		</section>	
+
+		<footer>
+			<center>&copy; 2020 Pena Atletica de India, All rights reserved</center>
+		</footer>
+	</body>
+</html>

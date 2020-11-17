@@ -1,0 +1,112 @@
+
+<!-- Add match thread links in website  -->
+
+<!DOCTYPE html>
+<html>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<head>
+		<title>Pena Atletica de India</title>
+	</head>
+
+	<body>
+		<header>
+			<center><img src="/images/atletico.svg"/></center>
+			<h1 id="textBelowLogo" onmouseover="effectBelowLogo()">
+				<center><strong>PORQUE LUCHAN COMO HERMANOS</strong></center>
+			</h1>
+			<nav>
+				<center><li><a href="/index.html">Home</a></li>	<!-- 'a' tag or anchor tag is used for giving links -->
+				<li><a href="/meetings.html">Meeting Links</a></li>
+				<li><a href="/about.html">About</a></li>
+				<li><a href="/contact.html">Contact</a></li></center>
+			</nav>
+		</header>
+	
+		<section id="main">
+			<h1>
+				<center>This is the <em>Official page</em> of <strong>Pena Atletica de India</strong></center>	<!-- em is used to make things italics and strong is used to make things bold -->
+			</h1>
+
+			<form action="/api/login" method="POST"> <!-- If we write nothing in method it takes 'GET' HTTP request by default, but GET HTTP request exposes the login credentials in URL above thus making hacking a possibility, thats why to hide credentials in URL 'POST' method is used -->
+				<center><label>Username: </label><input type="text" name="username" id="username" required></center> <!--'id' is given so that this part can be identified uniquely-->
+				<br/>
+				<center><label>Password: </label><input type="password" name="password" id="password" required></center>
+				<br/>
+				<center><input type="checkbox" name="rememberme" id="rememberme"><label>Remember me</label></center>
+				<br/>	
+				<center><input type="submit" name="loginbutton" value="Login"/> <input type="reset" name="cancelbutton" value="Cancel"/></center>
+				<br/>
+			</form>
+		</section>	
+
+		<div id="results">
+				<center><h2>Meeting Links :-</h2></center>
+				<div id="resultList">
+					<center><button id="toggleButton">Show</button></center><br/>
+					<div id="meetingLinks">
+						<center id="link1"	onmouseover="effectOnMeetingLinks1()" onmouseout="reverseeffectOnMeetingLinks1()"><a href="https://chat.whatsapp.com/CM6KCedwmrQHGi47cJ9oQR" onmouseover="this.style.color='white'" onmouseout="this.style.color='gold'">Official Whatsapp Group of Pena Atletica de India</a></center><br/>
+						<center id="link2" onmouseover="effectOnMeetingLinks2()" onmouseout="reverseeffectOnMeetingLinks2()"><a href="https://chat.whatsapp.com/DlbGoH5Agu8LVvYxFrAt2H">Official Whatsapp Group of Atletico de Madrid Fans West Bengal</a></center><br/>
+					</div>
+				</div>
+		</div>
+		
+		<footer>
+			<center>&copy; 2020 Pena Atletica de India, All rights reserved</center>
+		</footer>
+	</body>
+
+	<script type="text/javascript">
+		function effectBelowLogo()
+		{
+			var x = document.getElementById("textBelowLogo");
+			x.innerHTML="<center>Aupa Atleti</center>";
+			x.style.fontSize="52px";
+		}
+		function effectOnMeetingLinks1()
+		{
+			var p = document.getElementById("link1");
+			p.style.fontSize="30px";
+			p.style.Color="midnightblue";
+		}
+		function effectOnMeetingLinks2()
+		{
+			var q = document.getElementById("link2");
+			q.style.fontSize="30px";
+		}	
+		function reverseeffectOnMeetingLinks1()
+		{
+			var j = document.getElementById("link1");
+			j.style.fontSize="25px";
+		}
+		function reverseeffectOnMeetingLinks2()
+		{
+			var t = document.getElementById("link2");
+			t.style.fontSize="25px";
+		}
+	</script>
+    <!-- Always write JavaScript/JQuery Code below HTML body, or else the JavaScript/JQuery Code will run before execution of the DOM -->
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript">
+		var x = $("#meetingLinks");		// '$' sign in Jquery is similar to 'document.getElementById()' of JavaScript
+		var toggleButton = $("#toggleButton"); 
+		x.hide();
+		toggleButton.on("click",function(){		//by "click" we mean on clicking of the button the function() will execute
+			x.toggle(500);				//with the help of toggle() function we can either show a content or hide a content at the same time, and see we passed '500' in toggle() function this is the reason why animation is taking place during showing and hiding the content, if we pass nothing no animation will take place
+			if(toggleButton.text() === "Hide")
+			{
+				toggleButton.text("Show");
+			}
+			else
+			{
+				toggleButton.text("Hide");
+			}
+		});
+	</script>
+	
+</html>
+
+
+
+

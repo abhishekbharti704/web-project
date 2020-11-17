@@ -1,0 +1,75 @@
+html, body	/*HTML provides some margin and padding by default, this part is written to remove it*/
+{
+	padding: 0px;
+	margin: 0px;
+}
+header
+{
+	background-color: red;
+	border: 10px solid midnightblue;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 20px;
+	padding: 10px;
+}
+header nav li
+{
+	display: inline;
+	font-size: 24px;
+	padding-right: 15px;
+}
+a
+{
+	color: gold;
+}
+body
+{
+	font-family: serif;
+}
+footer
+{
+	border: 10px solid gold;
+	border-radius: 20px;
+	padding: 5px;
+}
+#main
+{
+	margin: 44px 0px;
+}
+#results
+{
+	border: 5px solid midnightblue;
+	border-radius: 20px;
+	background-color: red;
+	color: white;
+}
+#main label	/* # is put infront of an id to refer to it in the HTML part*/
+{
+	font-weight: bold;
+}
+#main input[type=text],#main input[type=password]
+{
+	width: 200px;
+	border: 2px solid black;
+	border-radius: 5px;	/*border-radius is used to make the edges of input boxes round_corners*/
+}
+#main input[type=submit],input[type=reset]
+{
+	background-color: midnightblue;
+	color: gold;
+	border-radius: 10px;
+	width: 100px; /*width is used to manipulate the breadth of the button/textfield*/
+	padding: 4px; /*padding is used to manipulate the length of the button/textfield*/
+}
+#toggleButton
+{
+	background-color: midnightblue;
+	color: gold;
+	border-radius: 10px;
+	width: 100px; 
+	padding: 4px; 
+}
+#meetingLinks
+{
+	font-size: 25px;
+}
